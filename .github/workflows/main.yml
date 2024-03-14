@@ -1,0 +1,16 @@
+name: vitest-testing
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Node.js and Dependencies
+      run: |
+        npm install
+        npm run test
