@@ -5,19 +5,25 @@ export function add(str) {
     if(str === "1"){
         return 1;
     }
-    const nums = str.split(/,|\n/);
-    if (nums.includes("")) {
-        return null; 
+
+    let delimiter = /[,\n]/;
+    if (str.startsWith("//")) {
+        const customDelimite = str[2]; 
+        delimiter = new RegExp(customDelimite.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); 
+        str = str.substring(4); 
     }
 
-    if (nums.length === 2) {
-        return parseInt(nums[0]) + parseInt(nums[1]);
+
+    const nums = str.split(delimiter);
+    if (nums.includes("")) {
+        return null; 
     }
 
     let sum = 0;
     for (let num of nums) {
         sum += parseInt(num);
     }
+
     return sum;
 
   }

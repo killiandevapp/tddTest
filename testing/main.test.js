@@ -20,5 +20,10 @@ test('Newline as delimiter returns correct sum', () => {
     expect(add("1,\n")).toBe(null);
 });
 
+test('Support different delimiters', () => {
+    expect(add("//;\n1;2")).toBe(3);
+
+});
+
 
 
