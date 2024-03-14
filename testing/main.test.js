@@ -16,7 +16,7 @@ test('Multiple numbers string return their sum', () => {
     expect(add("1,2,3,4,5")).toBe(15);
 });
 test('newline as delimiter returns correct sum', () => {
-    expect(add("1\n2,3")).toBe(5);
+    expect(add("1\n2,3")).toBe(6);
     expect(add("1,\n")).toBe(null);
 });
 
