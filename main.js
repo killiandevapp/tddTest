@@ -20,7 +20,5 @@ export function add(str) {
     for (let num of nums) {
         sum += parseInt(num);
     }
-
     return sum;
-
   }
