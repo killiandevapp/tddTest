@@ -24,6 +24,9 @@ test('Support different delimiter', () => {
     expect(add("//;\n1;2")).toBe(3);
 
 });
+test('Negative number', () => {
+    expect(add("-5")).toBe("Negatves not allowed for -5")
+})
 
 
 

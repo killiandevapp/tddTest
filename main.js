@@ -5,6 +5,10 @@ export function add(str) {
     if(str === "1"){
         return 1;
     }
+    if(str < 0){
+        return `Negatves not allowed for ${str}`
+    }
+
 
     let delimiter = /[,\n]/;
     if (str.startsWith("//")) {
