@@ -10,5 +10,11 @@ export function add(str) {
     if (nums.length === 2) {
         return parseInt(nums[0]) + parseInt(nums[1]);
     }
+    
+    let sum = 0;
+    for (let num of nums) {
+        sum += parseInt(num);
+    }
+    return sum;
 
   }

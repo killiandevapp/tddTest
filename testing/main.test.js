@@ -12,4 +12,9 @@ test('two numbers', () => {
     expect(add("1,2")).toBe(3);
 });
 
+test('Multiple numbers string returns their sum', () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+});
+
+
 
